@@ -13,40 +13,33 @@ By David Garcia
   src: url(QuaelGothic.ttf);
 }
 
-/* Keeps everything on one full screen, no need to scroll */
+html {
+  height: 100%;
+}
+
 body {
-  min-height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 /* Sets min height to 100% for viewport height for everything around page */
-#whole-wrap {
+/* #whole-wrap {
   position: relative;
   min-height: 100vh;
-}
+} */
 
-/* Ensures enough space for left for footer */
-#header-wrap {
+/* Ensures enough space left for footer */
+/* #header-wrap {
   padding-bottom: 2.5rem;
-}
-
-/* Needs to be absolute with value of 0 to stick to bottom of whole wrap */
-#footer {
-  font-family: myRockFont;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  color: rgb(138, 22, 22)
-}
+} */
 
 h1 {
   color: black;
   font-family: myRockFont;
-  font-size: 150px;
+  font-size: 100px;
   letter-spacing: 10px;
   word-spacing: 20px;
   line-height: 150px;
@@ -56,7 +49,7 @@ h1 {
 h2 {
   color: black;
   font-family: myGothFont;
-  font-size: 75px;
+  font-size: 55px;
   letter-spacing: 10px;
   word-spacing: 12px;
   line-height: 75px;
@@ -66,8 +59,8 @@ h2 {
 /* Got example for big red button on codepen https://codepen.io/dudleystorey/pen/zqgGn */
 button {
   border-radius: 75%;
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
   border: none;
   color: white;
   font-family: fantasy;
@@ -121,5 +114,16 @@ button:active {
   font-family: myRockFont;
   font-size: 4.0rem;
   text-align: center;
-  color: black
+  color: red
+}
+
+/* Needs to be absolute with value of 0 to stick to bottom of whole wrap */
+#footer {
+  font-family: myRockFont;
+  font-size: 20px;
+  position: absolute;
+  bottom: 2;
+  width: 100%;
+  height: 6rem;
+  color: rgb(138, 22, 22)
 }

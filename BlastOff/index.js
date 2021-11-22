@@ -13,10 +13,8 @@ function startTheCountDown() {
   // Declarations
 
   // Display the start of the count
-  //var countdown = 10;
   // Used to keep track of the actual time
   // 1000 = 1 second because we are using milliseconds
-  //var timeout = 12000;
   // This  method sets a timer which executes a function or specified piece of code once the timer expires.
 
   setTimeout(() => {
@@ -86,8 +84,12 @@ function startTheCountDown() {
   timeout -= 1000;
 }
 
-function initToBlastOFF () {
-  setTimeout(document.getElementById("BlastOffDisplay").innerHTML = "BLAST OFF", 10000);
+function initializing() {
+  setInterval(initToBlastOFF, 10000);
+}
+
+function initToBlastOFF() {
+  document.getElementById("BlastOffDisplay").innerHTML = "BLAST OFF"
 }
 
 // This function is used to play a song from an mp3 file on the web.
