@@ -1,0 +1,122 @@
+/* CSS for BlastOff Assignment
+By David Garcia
+11/28/2021 */
+
+/* Custom font files included */
+@font-face {
+  font-family: "myRockFont";
+  src: url(District.ttf);
+}
+
+@font-face {
+  font-family: "myGothFont";
+  src: url(QuaelGothic.ttf);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* instructs browser to auto scale width & height */
+  background: url('space-rocket.jpg') no-repeat center fixed;
+  /* resizes the background image to cover up whole tag space, 
+    image will be stretched and cropped depending on ratio. */
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-family: myRockFont;
+  font-size: 100px;
+  letter-spacing: 10px;
+  word-spacing: 20px;
+  line-height: 150px;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-family: myGothFont;
+  font-size: 55px;
+  letter-spacing: 10px;
+  word-spacing: 12px;
+  line-height: 75px;
+  text-align: center;
+}
+
+/* Got example for big red button on codepen https://codepen.io/dudleystorey/pen/zqgGn */
+button {
+  border-radius: 75%;
+  width: 275px;
+  height: 275px;
+  border: none;
+  color: white;
+  font-family: fantasy;
+  font-weight: 900;
+  font-size: 4rem;
+  background: red;
+  text-shadow: 0 3px 1px rgba(122, 17, 8, .8);
+  box-shadow: 0 8px 0 rgb(183, 9, 0),
+    0 15px 20px rgba(0, 0, 0, .35);
+  text-transform: uppercase;
+  transition: .2s all ease-out;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Used https://www.w3schools.com/howto/howto_css_animate_buttons.asp to animate buttons */
+
+/* Background color when mouse hovers over button */
+button:hover {
+  background-color: darkred;
+}
+
+/* Centers a button level element, sets both margin left & right */
+.margin-auto {
+  margin: 0 auto;
+}
+
+/* Button active state */
+button:active {
+  /* Controls space inside the button, buffer room, and clickable space */
+  padding-top: 2px;
+  /* How much the button moves */
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 rgb(85, 7, 7),
+    0 8px 6px rgba(3, 3, 3, 0.45);
+}
+
+#CountdownDisplay {
+  font-family: myRockFont;
+  font-size: 4.0rem;
+  text-align: center;
+  color: white
+}
+
+#BlastOffDisplay {
+  font-family: myRockFont;
+  font-size: 4.0rem;
+  text-align: center;
+  color: white
+}
+
+/* Needs to be absolute with value of 0 to stick to bottom of whole wrap */
+#footer {
+  font-family: myRockFont;
+  font-size: 20px;
+  position: absolute;
+  bottom: 2;
+  width: 100%;
+  height: 6rem;
+  color: white
+}
