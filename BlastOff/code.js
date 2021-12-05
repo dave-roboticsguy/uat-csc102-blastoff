@@ -24,6 +24,16 @@ function startTheCountDown() {
         document.getElementById("CountdownDisplay").innerHTML = "Blast OFF !!";
       }, 1000 * i);
     }
+    // added else if that starts when counter = 5 and continues until Blast Off
+    //Added new line to the DOM output
+    else if (i < 6) {
+      setTimeout(() => {
+        document.getElementById("CountdownDisplay").innerHTML = "Warning Less than ½ way to launch,<br/> time left = " + currTime;
+        // js subtraction assignment -=
+        currTime -= 1;
+      }, timeout);
+      timeout -= 1000;
+    }
     // Decrement currTime by -1 and substracts 1 sec from timeout and displays to html element CountdownDisplay
     else {
       setTimeout(() => {
